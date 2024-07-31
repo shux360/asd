@@ -11,6 +11,7 @@ import { Trash2, PencilLine } from "lucide-react";
 import { DeleteProduct } from "../redux/action";
 
 const Menu = () => {
+  const role = localStorage.getItem("role");
   const { filterby } = useParams();
   const image = useSelector((state) => state.product.productList);
   const navigate = useNavigate();
@@ -73,7 +74,7 @@ const Menu = () => {
           />
         </div>
         <div className="flex flex-col gap-1">
-          <h3 className="font-semibold text-slate-600  capitalize text-2xl md:text-4xl">
+          <h3 className="font-semibold text-slate-600  capitalize text-2xl md:text-4xl mt-5">
             {Data.name}
           </h3>
           <p className=" text-slate-500  font-medium text-2xl">
@@ -84,7 +85,7 @@ const Menu = () => {
             <span>{Data.price}</span>
           </p>
 
-          {userData.email === process.env.REACT_APP_ADMIN_EMAIL ? (
+          {role === "admin" ? (
             <div className="admin-buttons flex space-x-2">
               {/* <Link
                 to={`/editProduct/${Data._id}`}
@@ -102,13 +103,13 @@ const Menu = () => {
 
               <div className="admin-buttons flex space-x-2">
                 <button
-                  className="bg-white border-2 border-blue-600 py-1 mt-2 rounded hover:bg-blue-600 text-blue-600 hover:text-white w-full flex justify-center"
+                  className="bg-white border-2 border-blue-600 py-1 mt-2 rounded hover:bg-blue-600 text-blue-600 hover:text-white flex justify-center min-w-[60px]"
                   onClick={handleEditProduct}
                 >
                   <PencilLine />
                 </button>
                 <button
-                  className="bg-white border-2 border-red-600 py-1 mt-2 rounded hover:bg-red-600 text-red-600 hover:text-white w-full flex justify-center"
+                  className="bg-white border-2 border-red-600 py-1 mt-2 rounded hover:bg-red-600 text-red-600 hover:text-white  flex justify-center min-w-[60px]"
                   onClick={handleDeleteProduct}
                 >
                   <Trash2 />

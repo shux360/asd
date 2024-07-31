@@ -1,12 +1,15 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ChefHat } from "lucide-react";
+import { Leaf } from "lucide-react";
+import { HandHeart } from "lucide-react";
+import { Award } from "lucide-react";
 
 const About = () => {
   return (
-    <div className="flex flex-col min-h-[100dvh] p-12">
+    <div className="flex flex-col min-h-[100dvh] items-center">
       <main className="flex-1">
-        <section className="bg-[#f8f9fa] py-12 md:py-24">
+        <section className=" py-12 md:py-24">
           <div className="container">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
@@ -77,7 +80,7 @@ const About = () => {
             </div>
           </div>
         </section>
-        <section className="bg-[#f8f9fa] py-12 md:py-24">
+        <section className=" py-12 md:py-24">
           <div className="container">
             <div className="grid md:grid-cols-2 gap-8">
               <img
@@ -117,21 +120,7 @@ const About = () => {
                 </h2>
                 <ul className="space-y-10 pt-8 text-muted-foreground text-lg">
                   <li className="flex items-start gap-4">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokewidth="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      className="h-6 w-6 text-primary"
-                    >
-                      <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
-                      <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
-                    </svg>
+                    <Leaf className="h-8 w-8" />
                     <div>
                       <h3 className="font-bold">Sustainability</h3>
                       <p>
@@ -142,20 +131,7 @@ const About = () => {
                     </div>
                   </li>
                   <li className="flex items-start gap-4">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokewidth="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      className="h-6 w-6 text-primary"
-                    >
-                      <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"></path>
-                    </svg>
+                    <HandHeart className="h-8 w-8" />
                     <div>
                       <h3 className="font-bold">Community</h3>
                       <p>
@@ -166,23 +142,7 @@ const About = () => {
                     </div>
                   </li>
                   <li className="flex items-start gap-4">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokewidth="2"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      className="h-6 w-6 text-primary"
-                    >
-                      <circle cx="12" cy="12" r="10"></circle>
-                      <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
-                      <line x1="9" x2="9.01" y1="9" y2="9"></line>
-                      <line x1="15" x2="15.01" y1="9" y2="9"></line>
-                    </svg>
+                    <Award className="h-8 w-8" />
                     <div>
                       <h3 className="font-bold">Quality</h3>
                       <p>
@@ -243,16 +203,16 @@ const About = () => {
           </div>
         </section>
         <section className="py-12 md:py-24">
-          <div className="container ">
+          <div className="container">
             <h2 className="text-2xl font-bold mb-8 text-center text-green-700">
               What Our Customers Say
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 ">
               <div
-                className="border text-card-foreground p-6 bg-[#f8f9fa] rounded-lg shadow-md"
+                className="border text-card-foreground p-6 bg-[#f8f9fa] rounded-lg shadow-md items-center"
                 data-v0-t="card"
               >
-                <div className="flex items-start gap-4 mb-4">
+                <div className="flex gap-4 mb-4 items-center">
                   <span className="relative flex h-10 w-10 shrink-0 overflow-hidden rounded-full">
                     <img
                       className="aspect-square h-full w-full"

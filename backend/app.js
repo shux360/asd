@@ -83,6 +83,11 @@ const Stripe = require("stripe");
 const user = require("./routes/user");
 const product = require("./routes/product");
 const payment = require("./routes/payment");
+const helmet = require("helmet");
+const compression = require("compression");
+const morgan = require("morgan");
+const fs = require("fs");
+const path = require("path");
 
 const app = express();
 app.use(cors());
@@ -99,9 +104,17 @@ mongoose
   .then(() => console.log("Connect to Databse"))
   .catch((err) => console.log(err));
 
+const accessLogStream = fs.createWriteStream(
+  path.join(__dirname, "access.log"),
+  { flags: "a" }
+);
+
 app.use(user);
 app.use(product);
 app.use(payment);
+app.use(helmet());
+app.use(compression());
+app.use(morgan("common", { stream: accessLogStream }));
 
 //api
 app.get("/", (req, res, next) => {

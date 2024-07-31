@@ -31,8 +31,11 @@ const Header = () => {
 
       <div className="flex items-center h-full justify-between">
         <Link to={""}>
-          <div className="h-10">
-            <ChefHat className="h-8 w-8 hover:text-green-700" />
+          <div className="h-10 flex hover:text-green-700">
+            <ChefHat className="h-8 w-8 " />
+            <Link to={"about"} className="pl-1 text-2xl font-medium">
+              Greenery Grocer
+            </Link>
           </div>
         </Link>
 
