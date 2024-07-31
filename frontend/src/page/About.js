@@ -23,18 +23,18 @@ const About = () => {
                 <div className="flex gap-4">
                   <Link
                     className="inline-flex h-10 items-center justify-center rounded-md bg-green-700 px-6 text-sm font-medium text-white shadow transition-colors hover:bg-green-800 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                    to="/"
+                    to={"/home"}
                     rel="ugc"
                   >
                     Shop Now
                   </Link>
-                  <a
+                  <Link
                     className="inline-flex h-10 items-center justify-center rounded-md bg-green-700 px-6 text-sm font-medium text-white shadow transition-colors hover:bg-green-800 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50"
-                    href="#"
+                    to={"/login"}
                     rel="ugc"
                   >
-                    Learn More
-                  </a>
+                    Login
+                  </Link>
                 </div>
               </div>
               <img

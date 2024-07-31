@@ -52,9 +52,6 @@ const Home = () => {
             and scrambled it to make a type specimen book. It has survived not
             only five centuries
           </p>
-          <button className="font-bold bg-red-500 text-slate-200 px-4 py-2 rounded-md">
-            Order Now
-          </button>
         </div>
 
         <div className="md:w-1/2 flex flex-wrap gap-5 p-4 justify-center">
