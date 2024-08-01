@@ -20,7 +20,7 @@ const Header = () => {
   const handleLogout = () => {
     localStorage.clear();
     dispatch(logoutRedux());
-    toast("Logout successfully");
+    toast("Logout successfully", suce);
     navigate("/");
   };
 
@@ -42,13 +42,13 @@ const Header = () => {
         <div className="flex items-center gap-4 md:gap-7">
           <nav className="gap-4 md:gap-6 text-base md:text-lg hidden md:flex">
             <Link
-              to={"about"}
+              to={"home"}
               className="text-lg font-medium hover:underline underline-offset-4 transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:text-green-700"
             >
               Home
             </Link>
             <Link
-              to={"home"}
+              to={"shop"}
               className="text-lg font-medium hover:underline underline-offset-4 transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:text-green-700"
             >
               Shop
@@ -91,7 +91,7 @@ const Header = () => {
               )}
             </div>
             {showMenu && (
-              <div className="absolute right-2 bg-white py-2  shadow drop-shadow-md flex flex-col min-w-[120px] text-center">
+              <div className="mt-5 absolute right-2 rounded-lg border-2 bg-white py-2 shadow drop-shadow-md flex flex-col min-w-[120px] text-center">
                 {role === "admin" && (
                   <Link
                     to={"newproduct"}
@@ -121,7 +121,7 @@ const Header = () => {
                     Home
                   </Link>
                   <Link
-                    to={"home"}
+                    to={"shop"}
                     className="text-base md:text-lg flex flex-col md:hidden"
                   >
                     Shop

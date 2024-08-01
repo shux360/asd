@@ -46,7 +46,6 @@ const CardFeature = ({
         const response = await axios.delete(
           `${process.env.REACT_APP_SERVER_DOMAIN}/deleteProduct/${id}`
         );
-        console.log("deletedproduct", response.data);
         toast.success("Product deleted successfully");
         onDelete();
       } catch (error) {
@@ -97,7 +96,7 @@ const CardFeature = ({
               className="bg-yellow-500 py-1 mt-2 rounded hover:bg-yellow-600 w-full"
               onClick={handleAddCartProduct}
             >
-              Add Cart
+              Add to Cart
             </button>
           )}
         </>

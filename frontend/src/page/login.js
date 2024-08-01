@@ -16,6 +16,7 @@ const Login = () => {
   });
   const navigate = useNavigate();
   const userData = useSelector((state) => state);
+  const role = localStorage.getItem("role");
 
   const dispatch = useDispatch();
 
@@ -57,7 +58,7 @@ const Login = () => {
         localStorage.setItem("role", "user");
       }
 
-      toast(dataRes.message);
+      toast.success(dataRes.message);
 
       if (dataRes.alert) {
         dispatch(loginRedux(dataRes));
@@ -65,10 +66,8 @@ const Login = () => {
           navigate("/");
         }, 1000);
       }
-
-      console.log(userData);
     } else {
-      alert("Please Enter required fields");
+      toast.error("Please Enter required fields");
     }
   };
 
@@ -109,13 +108,13 @@ const Login = () => {
             </span>
           </div>
 
-          <button className="w-full max-w-[150px] m-auto  bg-red-500 hover:bg-red-600 cursor-pointer  text-white text-xl font-medium text-center py-1 rounded-full mt-4">
+          <button className="w-full max-w-[150px] m-auto  bg-green-600 hover:bg-green-700 cursor-pointer  text-white text-xl font-medium text-center py-1 rounded-full mt-4">
             Login
           </button>
         </form>
         <p className="text-left text-sm mt-2">
           Don't have account ?{" "}
-          <Link to={"/signup"} className="text-red-500 underline">
+          <Link to={"/signup"} className="text-green-500 underline">
             Sign Up
           </Link>
         </p>

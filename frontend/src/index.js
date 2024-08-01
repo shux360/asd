@@ -9,9 +9,9 @@ import {
   Route,
   RouterProvider,
 } from "react-router-dom";
-import Home from "./page/Home";
+import Shop from "./page/Shop";
 import Menu from "./page/Menu";
-import About from "./page/About";
+import Home from "./page/Home";
 import Contact from "./page/Contact";
 import Login from "./page/login";
 import Newproduct from "./page/Newproduct";
@@ -26,11 +26,11 @@ import EditProduct from "./page/EditProduct";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />}>
-      <Route index element={<About />} />
+      <Route index element={<Home />} />
       {/* <Route path="menu" element={<Menu />} /> */}
-      <Route path="about" element={<About />} />
-      <Route path="menu/:filterby" element={<Menu />} />
       <Route path="home" element={<Home />} />
+      <Route path="menu/:filterby" element={<Menu />} />
+      <Route path="shop" element={<Shop />} />
       <Route path="contact" element={<Contact />} />
       <Route path="login" element={<Login />} />
       <Route path="newproduct" element={<Newproduct />} />

@@ -78,10 +78,10 @@ const EditProduct = () => {
       const fetchRes = await fetchData.json();
 
       console.log(fetchRes);
-      toast(fetchRes.message);
+      toast.success(fetchRes.message);
       navigate("/");
     } else {
-      toast("Enter required Fields");
+      toast.error("Enter required Fields");
     }
   };
   return (

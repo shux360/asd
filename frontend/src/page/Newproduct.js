@@ -57,7 +57,7 @@ const Newproduct = () => {
       const fetchRes = await fetchData.json();
 
       console.log(fetchRes);
-      toast(fetchRes.message);
+      toast.success(fetchRes.message);
 
       setData(() => {
         return {
@@ -70,7 +70,7 @@ const Newproduct = () => {
         };
       });
     } else {
-      toast("Enter required Fields");
+      toast.error("Enter required Fields");
     }
   };
   return (

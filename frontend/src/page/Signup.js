@@ -46,7 +46,7 @@ function Signup() {
       };
     });
   };
-  console.log(process.env.REACT_APP_SERVER_DOMAIN);
+  // console.log(process.env.REACT_APP_SERVER_DOMAIN);
   const handleSubmit = async (e) => {
     e.preventDefault();
     const { firstName, email, password, confirmPassword } = data;
@@ -66,15 +66,16 @@ function Signup() {
         const dataRes = await fetchData.json();
 
         // alert(dataRes.message);
+        console.log(dataRes);
         toast(dataRes.message);
         if (dataRes.alert) {
           navigate("/login");
         }
       } else {
-        alert("password and confirm password not equal");
+        toast.error("Password and confirm password not equal");
       }
     } else {
-      alert("Please Enter required fields");
+      toast.error("Please Enter required fields");
     }
   };
 
@@ -169,13 +170,13 @@ function Signup() {
             </span>
           </div>
 
-          <button className="w-full max-w-[150px] m-auto  bg-red-500 hover:bg-red-600 cursor-pointer  text-white text-xl font-medium text-center py-1 rounded-full mt-4">
+          <button className="w-full max-w-[150px] m-auto  bg-green-600 hover:bg-green-700 cursor-pointer  text-white text-xl font-medium text-center py-1 rounded-full mt-4">
             Sign up
           </button>
         </form>
         <p className="text-left text-sm mt-2">
           Already have account ?{" "}
-          <Link to={"/login"} className="text-red-500 underline">
+          <Link to={"/login"} className="text-green-600 underline">
             Login
           </Link>
         </p>
