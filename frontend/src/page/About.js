@@ -4,6 +4,11 @@ import { ChefHat } from "lucide-react";
 import { Leaf } from "lucide-react";
 import { HandHeart } from "lucide-react";
 import { Award } from "lucide-react";
+import foodcarrying from "../assest/foodcarrying.gif";
+import Spkitchen from "../component/splinekitchen";
+import about_pic01 from "../assest/about_pic01.jpg";
+import about_pic2 from "../assest/about_pic2.jpg";
+import about_pic03 from "../assest/about_pic03.png";
 
 const About = () => {
   return (
@@ -37,19 +42,37 @@ const About = () => {
                   </Link>
                 </div>
               </div>
+              <script
+                type="module"
+                src="https://unpkg.com/@splinetool/viewer@1.9.3/build/spline-viewer.js"
+              ></script>
               <img
+                src={about_pic01}
+                width="550"
+                height="550"
+                alt="Our Story"
+                className="mx-auto aspect-square overflow-hidden rounded-xl object-cover"
+              />
+
+              {/* <img
+                src={foodcarrying}
+                width="300"
+                height="300"
+                className="aspect-square overflow-hidden rounded-xl object-cover"
+              /> */}
+              {/* <img
                 src="/placeholder.svg"
                 width="550"
                 height="550"
                 alt="Greenery Grocer"
                 className="mx-auto aspect-square overflow-hidden rounded-xl object-cover"
-              />
+              /> */}
             </div>
           </div>
         </section>
         <section className="py-12 md:py-24">
           <div className="container">
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <h2 className="text-2xl font-bold mb-4 text-green-700">
                   Our Story
@@ -70,24 +93,20 @@ const About = () => {
                   sustainability.
                 </p>
               </div>
-              <img
-                src="/placeholder.svg"
-                width="550"
-                height="550"
-                alt="Our Story"
-                className="mx-auto aspect-square overflow-hidden rounded-xl object-cover"
-              />
+              <div width="550" height="400">
+                <Spkitchen />
+              </div>
             </div>
           </div>
         </section>
         <section className=" py-12 md:py-24">
           <div className="container">
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
               <img
-                src="/placeholder.svg"
+                src={about_pic2}
                 width="550"
                 height="550"
-                alt="Our Mission"
+                alt="Our Story"
                 className="mx-auto aspect-square overflow-hidden rounded-xl object-cover"
               />
               <div>
@@ -154,11 +173,11 @@ const About = () => {
                 </ul>
               </div>
               <img
-                src="/placeholder.svg"
+                src={about_pic03}
                 width="550"
                 height="550"
-                alt="Our Values"
-                className="mx-auto aspect-square overflow-hidden rounded-xl object-cover"
+                alt="Our Story"
+                className="mx-auto aspect-square overflow-hidden rounded-xl object-cover items-center"
               />
             </div>
           </div>
