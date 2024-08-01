@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import logo from "../assest/logo.png";
 import { HiOutlineUserCircle } from "react-icons/hi";
 import { BsCartFill } from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
@@ -20,7 +19,7 @@ const Header = () => {
   const handleLogout = () => {
     localStorage.clear();
     dispatch(logoutRedux());
-    toast("Logout successfully", suce);
+    toast.success("Logout successfully");
     navigate("/");
   };
 

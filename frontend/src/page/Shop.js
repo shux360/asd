@@ -178,4 +178,4 @@ const Shop = () => {
   );
 };
 
-export default Home;
+export default Shop;

@@ -4,11 +4,9 @@ import { useNavigate, useParams, Link } from "react-router-dom";
 import AllProduct from "../component/AllProduct";
 import { addCartItem } from "../redux/productSlide";
 import { deleteProduct, editProduct } from "../redux/action";
-import { userData } from "../redux/";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { Trash2, PencilLine } from "lucide-react";
-import { DeleteProduct } from "../redux/action";
 
 const Menu = () => {
   const role = localStorage.getItem("role");

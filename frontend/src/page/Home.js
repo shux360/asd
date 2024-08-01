@@ -4,7 +4,6 @@ import { ChefHat } from "lucide-react";
 import { Leaf } from "lucide-react";
 import { HandHeart } from "lucide-react";
 import { Award } from "lucide-react";
-import foodcarrying from "../assest/foodcarrying.gif";
 import Spkitchen from "../component/splinekitchen";
 import about_pic01 from "../assest/about_pic01.jpg";
 import about_pic2 from "../assest/about_pic2.jpg";
@@ -15,7 +14,6 @@ import avatar03 from "../assest/avatar03.png";
 import avatar04 from "../assest/avatar04.png";
 import avatar05 from "../assest/avatar05.png";
 import avatar06 from "../assest/avatar06.png";
-import avatar07 from "../assest/avatar07.png";
 
 const About = () => {
   return (
