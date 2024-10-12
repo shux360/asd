@@ -101,7 +101,7 @@ mongoose
   .connect(
     "mongodb+srv://shux01:shammika28134@cluster0.el8biun.mongodb.net/grocery"
   )
-  .then(() => console.log("Connect to Databse"))
+  .then(() => console.log("Connected to Database"))
   .catch((err) => console.log(err));
 
 const accessLogStream = fs.createWriteStream(
