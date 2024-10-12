@@ -32,7 +32,7 @@ const Header = () => {
         <Link to={""}>
           <div className="h-10 flex hover:text-green-700">
             <ChefHat className="h-8 w-8 " />
-            <Link to={"about"} className="pl-1 text-2xl font-medium">
+            <Link to={""} className="pl-1 text-2xl font-medium">
               Greenery Grocer
             </Link>
           </div>
